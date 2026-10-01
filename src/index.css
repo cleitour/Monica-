@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #FAFAF8;
+    color: #1F2937;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Custom Luxury Gradients & Shadows */
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #EAB308 0%, #D97706 50%, #B45309 100%);
+}
+
+.bg-gold-soft-gradient {
+  background: linear-gradient(135deg, #FFFDF5 0%, #FEF9E7 50%, #FFFBEB 100%);
+}
+
+.bg-gold-subtle-glow {
+  background: radial-gradient(circle at 50% 50%, rgba(245, 158, 11, 0.09) 0%, rgba(254, 243, 199, 0.03) 50%, transparent 70%);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #CA8A04 0%, #B45309 50%, #92400E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.shadow-gold-sm {
+  box-shadow: 0 4px 14px 0 rgba(217, 119, 6, 0.08);
+}
+
+.shadow-gold-md {
+  box-shadow: 0 10px 25px -5px rgba(217, 119, 6, 0.12), 0 8px 10px -6px rgba(217, 119, 6, 0.06);
+}
+
+.shadow-gold-lg {
+  box-shadow: 0 20px 35px -10px rgba(217, 119, 6, 0.16), 0 10px 15px -5px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-3d-card {
+  box-shadow: 
+    0 1px 2px rgba(0,0,0,0.02),
+    0 4px 12px rgba(0,0,0,0.04),
+    0 16px 32px rgba(217, 119, 6, 0.06);
+}
+
+/* 3D button bevel & sheen */
+.btn-3d-gold {
+  background: linear-gradient(180deg, #FBBF24 0%, #D97706 60%, #B45309 100%);
+  box-shadow: 
+    0 2px 0 #92400E,
+    0 6px 16px rgba(217, 119, 6, 0.35);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-3d-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 3px 0 #92400E,
+    0 10px 22px rgba(217, 119, 6, 0.45);
+}
+
+.btn-3d-gold:active {
+  transform: translateY(1px);
+  box-shadow: 
+    0 1px 0 #92400E,
+    0 4px 10px rgba(217, 119, 6, 0.3);
+}
+
+/* 3D Social Badges */
+.badge-3d {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.08),
+    0 2px 4px -2px rgba(0, 0, 0, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.badge-3d:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 
+    0 12px 20px -3px rgba(0, 0, 0, 0.12),
+    0 4px 6px -4px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+/* Book 3D presentation */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Floating portrait & levitation shadow animations */
+@keyframes subtleFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+@keyframes shadowBreathe {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.35;
+  }
+  50% {
+    transform: scale(0.90);
+    opacity: 0.22;
+  }
+}
+
+.animate-floating {
+  animation: subtleFloat 4.5s ease-in-out infinite;
+}
+
+.animate-shadow-breathe {
+  animation: shadowBreathe 4.5s ease-in-out infinite;
+}
+

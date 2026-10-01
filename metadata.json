@@ -1,0 +1,6 @@
+{
+  "name": "Mônica Azevedo - Psicóloga & Neuropsicologia",
+  "description": "Bio site profissional da psicóloga Mônica Azevedo. Especialista em Neuropsicologia, Saúde Emocional, Avaliação Neuropsicológica, TCC, TEA e TDAH. CRP 05/60360.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
